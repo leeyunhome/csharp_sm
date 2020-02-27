@@ -24,6 +24,9 @@ namespace _5_3_maxPrimeOfInt
                 {
                     //Console.Write(j + " : ");
                     //Console.WriteLine(i % j);
+                    count++;
+                    if (count % 10000000000 == 0)
+                        Console.WriteLine("check_point");
                     if ((i % j) == 0) flagPrimeNumber = false;
                 }
                 if (flagPrimeNumber == true)
