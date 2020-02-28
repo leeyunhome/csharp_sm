@@ -58,6 +58,7 @@ namespace Chapter14
 
             labelLottoMoney.Text = "" + (int)lotto.Money;
             labelLottoDebt.Text = "" + (int)lotto.Debt;
+            chart1.Series["Series1"].Points.AddXY((int)thrift.Money, (int)lotto.Money);
             if (lottoFlag == 1)
                 labelWinLotto.Text = "로또 당첨";
             else
@@ -103,6 +104,11 @@ namespace Chapter14
                 pictureBoxThriftNormal.Visible = false;
                 pictureBoxThriftUnhappy.Visible = true;
             }
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
